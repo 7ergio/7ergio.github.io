@@ -1,0 +1,1 @@
+"use strict";jQuery(function(o){o(document).ready(function(){o(".dropdown-btn-js").click(function(s){s.preventDefault(),o(".header__dropdown").slideToggle(500)}),o(".cars-slider-js").slick({infinite:!0,slidesToShow:4,slidesToScroll:1,responsive:[{breakpoint:1024,settings:{slidesToShow:2,arrows:!1,dots:!0}},{breakpoint:767,settings:{slidesToShow:1,arrows:!1,dots:!0}}]})})});

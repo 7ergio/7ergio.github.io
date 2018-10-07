@@ -1,0 +1,296 @@
+.best-deals {
+  display: flex;
+  height: 460px;
+  padding: 105px 0;
+  background-image: url('../images/bg-top.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+
+  @media #{$mobile} {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+
+.best-deals__title {
+  font-size: $section-title-font-size;
+  font-weight: 600;
+  margin-top: 0;
+
+  @media #{$mobile} {
+    font-size: $block-title-font-size;
+  }
+}
+
+.best-deals__subtitle {
+  font-size: $title-font-size;
+  font-weight: 400;
+}
+
+.best-deals__buttons-block {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+
+  @media #{$mobile} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.best-deals__button {
+  margin-right: 20px;
+  width: 295px;
+  padding: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  border: 1px solid $white;
+  background: transparent;
+  text-align: center;
+
+  &:hover {
+    border: 1px solid $beige;
+    background: $beige;
+  }
+
+  @media #{$mobile} {
+    margin: 0 0 10px;
+    width: 100%;
+  }
+}
+
+.car-offer {
+  padding: 50px 0 60px;
+}
+
+.car-offer__title {
+  margin-bottom: 40px;
+  padding-left: 45px;
+  position: relative;
+
+  &:before {
+    color: $red-dark;
+    font-size: 32px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+  }
+}
+
+.car-offer__slider {
+  margin: 0 -10px;
+  overflow: hidden;
+  visibility: hidden;
+
+  .slick-slide {
+    display: none;
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-list {
+    padding: 5px 0;
+  }
+
+  &.slick-initialized {
+    overflow: visible !important;
+    visibility: visible;
+
+    .slick-slide {
+      display: block !important;
+    }
+  }
+}
+
+.car-offer__item {
+  display: block;
+  padding: 18px;
+  border-radius: 2px;
+  border: 1px solid $gray-slider;
+  background-color: $white;
+  margin: 0 10px;
+  height: auto;
+  color: $black;
+
+  &:hover {
+    box-shadow: 0 0 10px transparentize($black, .9);
+  }
+}
+
+.car-offer__image {
+  width: 100%;
+}
+
+.car-offer__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.car-offer__brand {
+  font-size: $big-font-size;
+  font-weight: 500;
+  margin: 0 0 16px;
+}
+
+.car-offer__name {
+  font-size: $regular-font-size;
+  font-weight: 300;
+  color: $gray-brand;
+  margin: 0;
+}
+
+.car-offer__footer-message {
+  font-weight: 300;
+  margin-top: 30px;
+}
+
+.brand {
+  padding-bottom: 100px;
+
+  @media #{$mobile} {
+    padding-bottom: 50px;
+  }
+}
+
+.brand__title {
+  margin-bottom: 40px;
+}
+
+.brand__logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media #{$mobile} {
+    justify-content: space-around;
+
+    img {
+      margin: 0 10px 20px;
+    }
+  }
+}
+
+.offer__top {
+  background: $black;
+  padding: 20px 0;
+  color: $white;
+
+  .content {
+    display: flex;
+  }
+}
+
+.offer__title {
+  font-size: $block-title-font-size;
+  font-weight: 600;
+  margin: 0 0 5px;
+
+  @media #{$mobile} {
+    font-size: $title-font-size;
+  }
+}
+
+.offer__name {
+  font-size: $title-font-size;
+  font-weight: 600;
+  margin: 5px 0 0;
+}
+
+.offer__attractive {
+  margin-left: 40px;
+}
+
+.attractive-label {
+  border-radius: 5px;
+  background: $beige-light;
+  padding: 7px 9px;
+  text-align: center;
+}
+
+.attractive-label__link {
+  font-size: 10px;
+  font-weight: 300;
+  text-decoration: underline;
+  color: $black;
+  margin: 0 0 10px;
+}
+
+.attractive-label__count {
+  color: $black;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.offer__bottom {
+  height: 450px;
+  padding: 67px 0 100px;
+  background-image: url('../images/bg-bottom.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  @media #{$desktop-big} {
+    height: 360px;
+  }
+}
+
+.offer__table-wrapper {
+  width: 100%;
+  max-width: 310px;
+}
+
+.offer__table {
+  background: $white;
+  padding: 24px 22px 24px 28px;
+}
+
+.price-table {
+  margin-bottom: 20px;
+}
+
+.price-table__item {
+  margin-bottom: 10px;
+  display: flex;
+
+  &--total {
+    margin-bottom: 3px;
+    margin-top: 16px;
+    font-weight: 700;
+  }
+}
+
+.price-table__left-part {
+  flex-basis: 75%;
+}
+
+.price-table__right-part {
+  flex-basis: 25%;
+}
+
+.offer__button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  background: $red;
+  text-align: center;
+
+  &:hover {
+    background: darken($red, 10%);
+  }
+}

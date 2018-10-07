@@ -1,0 +1,141 @@
+.header {
+  padding: 22px 0;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    @media #{$mobile} {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.header__logo {
+  display: block;
+
+  @media #{$mobile} {
+    margin-bottom: 10px;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+
+  @media #{$mobile} {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.header__nav-item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media #{$mobile} {
+    margin: 5px 0;
+  }
+}
+
+.header__nav-link {
+  color: $black;
+  font-size: $big-font-size;
+  font-weight: 600;
+}
+
+.header__nav--logged {
+  position: relative;
+
+  .header__nav-list {
+
+    @media #{$mobile} {
+      flex-direction: row;
+      margin-top: 10px;
+    }
+  }
+
+  .header__nav-item {
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .header__nav-link {
+    font-size: $title-font-size;
+    position: relative;
+
+    &--cart:after {
+      content: '';
+      width: 2px;
+      height: 38px;
+      background: $gray;
+      position: absolute;
+      right: -27px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--user-active:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: $red;
+      position: absolute;
+      left: -3px;
+      bottom: -3px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.header__dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  display: none;
+  background: $white;
+  padding: 0 24px;
+  width: 230px;
+  box-shadow: 0 2px 4px transparentize($black, .5);
+
+  @media #{$mobile} {
+    top: 60px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.header__dropdown-item {
+  border-bottom: 1px solid $gray-dark;
+  padding: 24px 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.header__dropdown-list {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.header__dropdown-link {
+  font-size: $big-font-size;
+  font-weight: 300;
+  color: $black;
+
+  &--active {
+    font-weight: 500;
+  }
+}
